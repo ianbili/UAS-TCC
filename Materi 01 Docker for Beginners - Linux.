@@ -1,0 +1,10 @@
+docker container run alpine hostname
+Unable to find image 'alpine:latest' locally
+ latest: Pulling from library/alpine
+ 88286f41530e: Pull complete
+ Digest: sha256:f006ecbb824d87947d0b51ab8488634bf69fe4094959d935c0c103f4820a417d
+ Status: Downloaded newer image for alpine:latest
+ 888e89a3b36b
+ 
+ CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS            PORTS               NAMES
+ 888e89a3b36b        alpine              "hostname"          50 seconds ago      Exited (0) 49 seconds ago                       awesome_elion
