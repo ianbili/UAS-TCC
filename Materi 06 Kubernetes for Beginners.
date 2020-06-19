@@ -1,0 +1,37 @@
+Your Kubernetes master has initialized successfully!
+
+  To start using your cluster, you need to run (as a regular user):
+
+    mkdir -p $HOME/.kube
+    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+  You should now deploy a pod network to the cluster.
+  Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+    http://kubernetes.io/docs/admin/addons/
+
+  You can now join any number of machines by running the following on each node
+  as root:
+
+  kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH
+  
+  
+  
+  kubeadm join --token a146c9.9421a0d62a0611f4 172.26.0.2:6443 --discovery-token-ca-cert-hash sha256:9a4dc07bd8ac596336ecee6ce0928b3500174037c07a38a03bebef25e97c4db5
+Initializing machine ID from random generator.
+[kubeadm] WARNING: kubeadm is in beta, please do not use it for production clusters.
+[preflight] Skipping pre-flight checks
+[discovery] Trying to connect to API Server "172.26.0.2:6443"
+[discovery] Created cluster-info discovery client, requesting info from "https://172.26.0.2:6443"
+[discovery] Requesting info from "https://172.26.0.2:6443" again to validate TLS against the pinned public key
+[discovery] Cluster info signature and contents are valid and TLS certificate validates against pinned roots, will use API Server "172.26.0.2:6443"
+[discovery] Successfully established connection with API Server "172.26.0.2:6443"
+[bootstrap] Detected server version: v1.8.11
+[bootstrap] The server supports the Certificates API (certificates.k8s.io/v1beta1)
+
+Node join complete:
+* Certificate signing request sent to master and response
+  received.
+* Kubelet informed of new secure connection details.
+
+Run 'kubectl get nodes' on the master to see this machine join.
